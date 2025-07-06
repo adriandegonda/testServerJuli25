@@ -1,0 +1,5 @@
+<script>
+  const ws = new WebSocket("wss://testserverjuli25-production.up.railway.app");
+  ws.onopen = () => ws.send("Hallo Server!");
+  ws.onmessage = (msg) => console.log("Antwort:", msg.data);
+</script>
